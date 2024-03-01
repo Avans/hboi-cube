@@ -1,0 +1,207 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eee;
+}
+
+
+.outer {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s;
+
+}
+
+.rotate {
+    transform: rotateY(45deg) rotateX(-25deg) rotateZ(-25deg);
+}
+
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-color:white;
+}
+
+.cube__face--front {
+   
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.cube__face--right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube__face--back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube__face--left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube__face--top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube__face--bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+.cube li>ul {
+    flex-direction: row;
+    width: 100%;
+}
+
+.cube ul li {
+    flex: 1;
+}
+
+.cube ul label {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid gray;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cube input[type="radio"] {
+    display: none;
+}
+
+
+
+.architectuurlagen {
+    font-size:80%;
+}
+
+/* transform: rotateY(45deg) rotateX(-25deg) rotateZ(-25deg); */
+
+.cube:has(.architectuurlagen:hover) {
+    transform: rotateY(45deg) rotateX(-35deg) rotateZ(-30deg);
+} 
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+main .cube-container {
+    width: 50%;
+
+}
+
+main .details-container{
+    width:50%;
+}
+
+.orange {
+    background-color: #F8993D;
+    color:white;
+}
+
+.pink {
+    background-color: #ED028C;
+    color:white;
+}
+
+.lightred {
+    background-color: #EE3158;
+    color:white;
+}
+
+.red {
+    background-color:#BC2347;
+    color:white;
+}
+
+.darkred {
+    background-color: #881530;
+    color:white;
+}
+
+.purple {
+    background-color: #2E3092;
+    color:white;
+}
+
+.darkblue {
+    background-color: #0071BB;
+    color:white;
+}
+
+.lightblue {
+    background-color: #00AEEF;
+    color:white;
+}
+
+.green {
+    background-color: #82C55D;
+    color:white;
+}
+
+.yellow {
+    background-color: #EAE849;
+    color:white;
+}
+
+.cube:has(.categorien:hover) {
+    transform: rotateY(60deg) rotateX(-10deg) rotateZ(-10deg);
+} 
+
+.cube:has(.niveaus:hover) {
+    transform: rotateY(30deg) rotateX(-10deg) rotateZ(-10deg);
+} 
+
+
+label:has(>input[type="radio"]:checked) {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+
+.cube ul label:hover {
+    background-color: #f0f0f0;
+}
+
+.cube li label:hover {
+    background-color: #c7c7c7;
+}

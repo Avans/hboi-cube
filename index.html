@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cube.css">
+    <script src="cube.js" defer></script>
+</head>
+<body>
+    
+  <main>
+    <div class="cube-container">
+
+        <div class="outer">
+            <div>
+              <div class="scene">
+                <div class="cube rotate">
+                  <div class="cube__face cube__face--front">
+                    <ul class="niveaus">
+                        <li class="orange">
+                            <ul>
+                                <li><label><input type="radio" name="niveau" value="analyseren1">1</label></li>
+                                <li><label><input type="radio" name="niveau" value="analyseren2">2</label></li>
+                                <li><label><input type="radio" name="niveau" value="analyseren3">3</label></li>
+                                <li><label><input type="radio" name="niveau" value="analyseren4">4</label></li>
+                                <li><label><input type="radio" name="niveau" value="analyseren5">5</label></li>
+                            </ul>
+                        </li>
+                        <li class="pink">
+                            <ul>
+                                <li><label><input type="radio" name="niveau" value="adviseren1">1</label></li>
+                                <li><label><input type="radio" name="niveau" value="adviseren2">2</label></li>
+                                <li><label><input type="radio" name="niveau" value="adviseren3">3</label></li>
+                                <li><label><input type="radio" name="niveau" value="adviseren4">4</label></li>
+                                <li><label><input type="radio" name="niveau" value="adviseren5">5</label></li>
+                            </ul>
+                        </li>
+                        <li class="lightred">
+                            <ul>
+                                <li><label><input type="radio" name="niveau" value="ontwerpen1">1</label></li>
+                                <li><label><input type="radio" name="niveau" value="ontwerpen2">2</label></li>
+                                <li><label><input type="radio" name="niveau" value="ontwerpen3">3</label></li>
+                                <li><label><input type="radio" name="niveau" value="ontwerpen4">4</label></li>
+                                <li><label><input type="radio" name="niveau" value="ontwerpen5">5</label></li>
+                            </ul>
+                        </li>
+                        <li class="red">
+                            <ul>
+                                <li><label><input type="radio" name="niveau" value="realiseren1">1</label></li>
+                                <li><label><input type="radio" name="niveau" value="realiseren2">2</label></li>
+                                <li><label><input type="radio" name="niveau" value="realiseren3">3</label></li>
+                                <li><label><input type="radio" name="niveau" value="realiseren4">4</label></li>
+                                <li><label><input type="radio" name="niveau" value="realiseren5">5</label></li>
+                            </ul>
+                        </li>
+                        <li class="darkred">
+                            <ul>
+                                <li><label><input type="radio" name="niveau" value="manage1">1</label></li>
+                                <li><label><input type="radio" name="niveau" value="manage2">2</label></li>
+                                <li><label><input type="radio" name="niveau" value="manage3">3</label></li>
+                                <li><label><input type="radio" name="niveau" value="manage4">4</label></li>
+                                <li><label><input type="radio" name="niveau" value="manage5">5</label></li>
+                            </ul>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="cube__face cube__face--back"></div>
+                  <div class="cube__face cube__face--right">
+                  </div> 
+                  <div class="cube__face cube__face--left">
+                    <ul>
+                        <ul class="categorien">
+                            <li><label class="orange"><input type="radio" name="categorie" value="analyseren">Analyseren</label></li>
+                            <li><label class="pink"><input type="radio" name="categorie" value="adviseren">Adviseren</label></li>
+                            <li><label class="lightred"><input type="radio" name="categorie" value="ontwerpen">Ontwerpen</label></li>
+                            <li><label class="red"><input type="radio" name="categorie" value="realiseren">Realiseren</label></li>
+                            <li><label class="darkred"><input type="radio" name="categorie" value="manage">Manage & Control</label></li>
+                        </ul>
+                    </ul>
+                  </div>
+                  <div class="cube__face cube__face--top">
+                    <ul>
+                        <ul class="architectuurlagen">
+                            <li><label class="purple"><input type="radio" name="architectuurlaag" value="gebruikersinteractie">GEBRUIKERSINTERACTIE</label></li>
+                            <li><label class="darkblue"><input type="radio" name="architectuurlaag" value="organisatieprocessen">ORGANISATIEPROCESSEN</label></li>
+                            <li><label class="lightblue"><input type="radio" name="architectuurlaag" value="infrastructuur">INFRASTRUCTUUR</label></li>
+                            <li><label class="green"><input type="radio" name="architectuurlaag" value="software">SOFTWARE</label></li>
+                            <li><label class="yellow"><input type="radio" name="architectuurlaag" value="hardwareinterfacing">HARDWARE INTERFACING</label></li>
+                        </ul>
+                    </ul>
+                  </div>
+                  <div class="cube__face cube__face--bottom"></div>
+                </div>
+              </div>
+              <pre id="debug"></pre>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="details-container">
+        <div id="details">
+            <h1>Details</h1>
+            <p id="selected-items"></p>
+            <p id="description">Select items on the cube...</p>
+        </div>
+    </div>
+  </main>
+    
+      
+
+</body>
+</html>
